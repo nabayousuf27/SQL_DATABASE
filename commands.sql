@@ -42,13 +42,21 @@ SELECT * FROM user;
 
 create table user2(
 id int PRIMARY KEY ,
+age int,
 namme varchar(50) NOT NULL,
 email varchar(50) unique,
 followers INT DEFAULT 0,
 following INT,
 CONSTRAINT CHECK(age >= 13)
 );
-
+SELECT * FROM user2;
+INSERT INTO user2
+(id ,age , namme, email, followers,following)
+VALUES
+(1, 13,"naba" ,"naba@gmail.com",110,30),
+(2, 16,"mishaal" ,"mishaal@gmail.com",160,70),
+(3, 16,"laiba" ,"laiba@gmail.com",100,90);
+delete from user2;
 
 
 
