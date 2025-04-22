@@ -11,12 +11,13 @@ Insert into student
 values
 ("naba" , 231020 , "computer");
 select * from student;
-
 create database  IF NOT EXISTS college;
+
 create database  IF NOT EXISTS university;
 drop database IF EXISTS university; 
 show databases;
 show tables;
+
 -- table queries 
 -- creating user table
 create database if not exists instagram ;
@@ -49,14 +50,28 @@ followers INT DEFAULT 0,
 following INT,
 CONSTRAINT CHECK(age >= 13)
 );
+
+-- select and show data from DB
 SELECT * FROM user2;
+SELECT id, namme , age FROM user2;
+
+-- two user of aage 16 now it will show one
+SELECT DISTINCT age FROM user2;
+
 INSERT INTO user2
 (id ,age , namme, email, followers,following)
 VALUES
 (1, 13,"naba" ,"naba@gmail.com",110,30),
 (2, 16,"mishaal" ,"mishaal@gmail.com",160,70),
 (3, 16,"laiba" ,"laiba@gmail.com",100,90);
+
+-- USERS WHOSE FOLLOWERS COUNT IS GREATER THAN 100
+ SELECT namme, followers FROM user2
+ WHERE FOLLOWERS >100 ;
+ 
+ -- to delte the whole data from the table
 delete from user2;
+
 
 
 
