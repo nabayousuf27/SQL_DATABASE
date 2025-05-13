@@ -69,6 +69,10 @@ VALUES
  SELECT namme, followers FROM user2
  WHERE FOLLOWERS >100 ;
  
+  SELECT namme, followers FROM user2
+ WHERE namme = "mishaal" AND FOLLOWERS<100 ;
+ 
+ 
  -- to delte the whole data from the table
 delete from user2;
 
